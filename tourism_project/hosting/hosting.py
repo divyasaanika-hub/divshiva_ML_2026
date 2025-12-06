@@ -5,6 +5,6 @@ api = HfApi(token=os.getenv("HF_TOKEN"))
 api.upload_folder(
     folder_path="tourism_project/deployment",     # the local folder containing your files
     repo_id="divshiva1988/Tourism_package_acceptance_predictor_model",          # the target repository
-    repo_type="space",                      # dataset, model, or space
+    repo_type="model",                      # dataset, model, or space
     path_in_repo="",                          # optional: subfolder path inside the repo
 )
