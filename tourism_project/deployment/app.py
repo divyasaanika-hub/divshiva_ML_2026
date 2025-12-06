@@ -6,6 +6,17 @@ import joblib
 
 #https://huggingface.co/divshiva1988/Tourism_package_acceptance_predictor_model/resolve/main/best_Tourism_package_acceptance_predictor_model_v1.joblib
 # Download and load the trained model
+repo_id="divshiva1988/Tourism_package_acceptance_predictor_model"
+repo_type="space"
+
+try:
+    api.repo_info(repo_id=repo_id, repo_type=repo_type)
+    print(f"Space '{repo_id}' already exists. Using it.")
+except RepositoryNotFoundError:
+    print(f"Space '{repo_id}' not found. Creating new space...")
+    create_repo(repo_id=repo_id, repo_type=repo_type, private=False)
+    print(f"Space '{repo_id}' created.")
+    
 model_path = hf_hub_download(repo_id="divshiva1988/Tourism_package_acceptance_predictor_model", filename="best_Tourism_package_acceptance_predictor_model_v1.joblib")
 model = joblib.load(model_path)
 
