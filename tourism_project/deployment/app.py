@@ -7,7 +7,7 @@ import joblib
 #https://huggingface.co/divshiva1988/Tourism_package_acceptance_predictor_model/resolve/main/best_Tourism_package_acceptance_predictor_model_v1.joblib
 # Download and load the trained model
 repo_id="divshiva1988/Tourism_package_acceptance_predictor_model"
-repo_type="model"
+repo_type="space"
 
 try:
     api.repo_info(repo_id=repo_id, repo_type=repo_type)
