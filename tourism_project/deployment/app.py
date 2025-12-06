@@ -4,10 +4,10 @@ import pandas as pd
 from huggingface_hub import hf_hub_download
 import joblib
 
-https://huggingface.co/divshiva1988/Tourism_package_acceptance_predictor_model/resolve/main/best_Tourism_package_acceptance_predictor_model_v1.joblib
+#https://huggingface.co/divshiva1988/Tourism_package_acceptance_predictor_model/resolve/main/best_Tourism_package_acceptance_predictor_model_v1.joblib
 # Download and load the trained model
-#model_path = hf_hub_download(repo_id="divshiva1988/Tourism_package_acceptance_predictor_model", filename="best_Tourism_package_acceptance_predictor_model_v1.joblib")
-#model = joblib.load(model_path)
+model_path = hf_hub_download(repo_id="divshiva1988/Tourism_package_acceptance_predictor_model", filename="best_Tourism_package_acceptance_predictor_model_v1.joblib")
+model = joblib.load(model_path)
 
 model=joblib.load("https://huggingface.co/divshiva1988/Tourism_package_acceptance_predictor_model/resolve/main/best_Tourism_package_acceptance_predictor_model_v1.joblib")
 
